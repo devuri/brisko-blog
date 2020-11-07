@@ -8,8 +8,18 @@
  */
 
 ?>
+<?php if ( is_sticky( $post->ID ) ): ?>
+	<div class="row" style="margin-bottom: 1em; border: solid #efefef;">
+<?php else : ?>
+	<div class="row" style="margin-bottom: 1em; border-bottom: solid #efefef; padding-bottom: 1em;">
+<?php endif; ?>
+	<?php if ( has_post_thumbnail( $post->ID ) ): ?>
+		<div class="col-sm" style="margin-left: inherit;">
+			<?php Brisko\Theme::post_thumbnail(); ?>
+		</div>
+  	<?php endif; ?>
+  <div class="col-sm">
 <div class="post-article">
-	<?php Brisko\Theme::post_thumbnail(); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php
@@ -20,7 +30,7 @@
 		endif;
 		?>
 		<?php brisko_before_entry_meta(); ?>
-			<p class="post-meta" style="font-style: italic;color: #868e96;">
+			<p class="post-meta" style="font-style: italic;color: #868e96; font-size: medium;">
 				<?php
 				brisko_posted_on();
 				brisko_posted_by();
@@ -50,7 +60,7 @@
 				<?php brisko_entry_footer(); ?>
 			</footer><!-- .entry-footer -->
 		<?php else : ?>
-			<div class="post-excerpt">
+			<div class="post-excerpt" style="font-size: unset;">
 				<?php the_excerpt(); ?>
 			</div>
 		<div class="read-more ">
@@ -71,3 +81,5 @@
 	</div><!-- .entry-content -->
 </article><!-- #post-<?php the_ID(); ?> -->
 </div><!-- post-article -->
+</div><!-- "col-sm" -->
+</div><!-- "row" -->
