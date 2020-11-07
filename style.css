@@ -29,6 +29,12 @@ License URI: 	http://www.gnu.org/licenses/gpl-2.0.html
 	font-size: 1.75rem;
 }
 
+.sticky {
+	display: block;
+	border: none;
+	padding: 0;
+}
+
 .post-excerpt{
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 300;
@@ -36,9 +42,9 @@ License URI: 	http://www.gnu.org/licenses/gpl-2.0.html
 }
 
 body {
-  font-size: 20px;
-  color: #212529;
-  font-family: 'Lora', 'Times New Roman', serif;
+	font-size: large;
+  	color: #212529;
+  	font-family: 'Lora', 'Times New Roman', serif;
 }
 
 p {
@@ -60,10 +66,6 @@ h6 {
 a {
   color: #212529;
   transition: all 0.2s;
-}
-
-a:focus, a:hover {
-  color: #0085A1;
 }
 
 blockquote {
@@ -90,13 +92,13 @@ blockquote {
 
 ::-moz-selection {
   color: #fff;
-  background: #0085A1;
+  background: #6c757d;
   text-shadow: none;
 }
 
 ::selection {
   color: #fff;
-  background: #0085A1;
+  background: #6c757d;
   text-shadow: none;
 }
 
@@ -221,7 +223,6 @@ header.masthead .post-heading .meta a {
 
 .post-preview > a:focus, .post-preview > a:hover {
   text-decoration: none;
-  color: #0085A1;
 }
 
 .post-preview > a > .post-title {
@@ -249,7 +250,6 @@ header.masthead .post-heading .meta a {
 
 .post-preview > .post-meta > a:focus, .post-preview > .post-meta > a:hover {
   text-decoration: underline;
-  color: #0085A1;
 }
 
 @media only screen and (min-width: 768px) {
@@ -309,10 +309,6 @@ header.masthead .post-heading .meta a {
   opacity: 1;
 }
 
-.floating-label-form-group-with-focus label {
-  color: #0085A1;
-}
-
 form .form-group:first-child .floating-label-form-group {
   border-top: 1px solid #dee2e6;
 }
@@ -343,8 +339,8 @@ footer .copyright {
 }
 
 .btn-primary {
-  background-color: #0085A1;
-  border-color: #0085A1;
+  background-color: #6c757d;
+  border-color: #6c757d;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
