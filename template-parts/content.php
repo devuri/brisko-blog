@@ -61,7 +61,7 @@
 			</footer><!-- .entry-footer -->
 		<?php else : ?>
 			<div class="post-excerpt" style="font-size: unset;">
-				<?php the_excerpt(); ?>
+				<?php  Brisko\Theme::excerpt(); ?>
 			</div>
 		<div class="read-more ">
 			<a class="more-link <?php echo esc_html( Brisko\Theme::options()->button_border_radius( 0 ) ); ?>" href="<?php echo esc_url( get_permalink() ); ?>">
