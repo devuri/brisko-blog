@@ -9,12 +9,12 @@
 
 ?>
 <?php if ( is_sticky( $post->ID ) ): ?>
-	<div class="row" style="margin-bottom: 1em; border: solid #efefef;">
+	<div class="row sticky-post">
 <?php else : ?>
-	<div class="row" style="margin-bottom: 1em; border-bottom: solid #efefef; padding-bottom: 1em;">
+	<div class="row blog-post" style="">
 <?php endif; ?>
 	<?php if ( has_post_thumbnail( $post->ID ) ): ?>
-		<div class="col-sm" style="margin-left: inherit;">
+		<div class="col-sm entry-thumb" style="margin-left: inherit;">
 			<?php Brisko\Theme::post_thumbnail(); ?>
 		</div>
   	<?php endif; ?>
