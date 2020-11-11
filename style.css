@@ -15,6 +15,22 @@ License URI: 	http://www.gnu.org/licenses/gpl-2.0.html
 
 */
 
+div.brisko-navigation {
+    margin-bottom: 0.2em;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, .075);
+}
+
+.blog-thumbnail img {
+	object-position: center center;
+	object-fit: cover;
+   	top: 0px;
+   	left: 0px;
+	padding-right: 2rem;
+	position: absolute;
+   	width: 100%;
+   	height: 100%;
+}
+
 .nav-menu {
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 600;
@@ -35,6 +51,15 @@ License URI: 	http://www.gnu.org/licenses/gpl-2.0.html
 	padding: 0;
 }
 
+.sticky-post{
+	margin-bottom: 2em;
+	border: solid #efefef;
+}
+
+.blog-post{
+	margin-bottom: 2em;
+	/* border-bottom: solid #efefef; */
+}
 .post-excerpt{
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 300;
