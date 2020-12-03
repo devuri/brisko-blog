@@ -23,12 +23,12 @@
 <?php else : ?>
 	<div class="row blog-post" style="">
 <?php endif; ?>
-	<?php if ( has_post_thumbnail( $post->ID ) ): ?>
+<?php if ( has_post_thumbnail( $post->ID ) ): ?>
 		<div class="col-sm entry-thumb" style="margin-left: inherit;">
 			<?php Brisko\Theme::post_thumbnail(); ?>
 		</div>
-  	<?php endif; ?>
-  <div class="col-sm">
+<?php endif; ?>
+<div class="col-sm">
 <div class="post-article">
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
@@ -78,7 +78,6 @@
 			<?php echo esc_html__( 'Read More', 'brisko' ); ?>
 		</a>
 	</div>
-
 		<?php
 	endif;
 		wp_link_pages(
