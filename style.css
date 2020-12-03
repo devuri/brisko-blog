@@ -72,6 +72,34 @@ body {
   	font-family: 'Lora', 'Times New Roman', serif;
 }
 
+.post-article a {
+	text-decoration: underline;
+}
+
+.entry-meta {
+    width: 100%;
+    border: none;
+    border-left: none;
+    border-right: none;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    font-size: medium;
+    color: #999;
+}
+
+.comments-area a {
+	text-decoration: underline;
+}
+
+.post-title a {
+	text-decoration: none;
+}
+
+.read-more a {
+	text-decoration: none;
+}
+
 p {
   line-height: 1.5;
   margin: 30px 0;
