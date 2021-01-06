@@ -2,11 +2,11 @@
 Theme Name: 	Brisko Blog
 Author: 		devuri
 Description: 	Brisko Blog is a simple child theme based on the Brisko Theme, it is a good starting point for those who just need a blog.
-Version: 		0.7.1
+Version: 		0.7.2
 Tested up to:   5.4
 Requires PHP:   5.6
 Template:		brisko
-Text Domain: 	brisko
+Text Domain: 	brisko-blog
 Tags: 			custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 Author URI: 	https://wpbrisko.com
 Theme URI: 		https://demo.wpbrisko.com
@@ -64,6 +64,10 @@ div.brisko-navigation {
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 300;
     font-size: 1.75rem;
+}
+
+.entry-content .post-excerpt  a {
+	text-decoration: underline;
 }
 
 body {
