@@ -20,6 +20,10 @@ div.brisko-navigation {
     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, .075);
 }
 
+body a {
+	text-decoration: underline;
+}
+
 .blog-thumbnail img {
 	object-position: center center;
 	object-fit: cover;
