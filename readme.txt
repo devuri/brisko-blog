@@ -51,3 +51,4 @@ Url : https://commons.wikimedia.org/wiki/File:Raindrops_on_nasturtium_leaves.jpg
 * Fix Theme text domain
 * Add License file
 * Add Raindrops on nasturtium leaves (Image) License information
+* Add underline textwidget links

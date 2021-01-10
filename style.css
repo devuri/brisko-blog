@@ -66,6 +66,10 @@ div.brisko-navigation {
     font-size: 1.75rem;
 }
 
+.textwidget a {
+	text-decoration: underline;
+}
+
 .entry-content .post-excerpt  a {
 	text-decoration: underline;
 }
