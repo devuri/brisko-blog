@@ -34,8 +34,20 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
+== Screenshot Image ==
+
+Raindrops on nasturtium leaves
+License: CC0
+This work has been released into the public domain by its author, Leon Brooks. This applies worldwide.
+Url : https://commons.wikimedia.org/wiki/File:Raindrops_on_nasturtium_leaves.jpg
+
 
 == Changelog ==
 
 = 0.7.1 =
 * Initial release
+
+= 0.7.2 =
+* Fix Theme text domain
+* Add License file
+* Add Raindrops on nasturtium leaves (Image) License information
