@@ -17,8 +17,8 @@
 		<div class="col-sm entry-thumb" style="margin-left: inherit;">
 			<?php Brisko\Theme::post_thumbnail(); ?>
 		</div>
-  	<?php endif; ?>
-  <div class="col-sm">
+	<?php endif; ?>
+	<div class="col-sm">
 <div class="post-article">
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
