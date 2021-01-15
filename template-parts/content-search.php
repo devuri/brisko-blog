@@ -55,7 +55,7 @@
 				sprintf(
 					wp_kses(
 						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'brisko' ),
+						__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'brisko-blog' ),
 						array(
 							'span' => array(
 								'class' => array(),
@@ -75,14 +75,14 @@
 			</div>
 		<div class="read-more ">
 			<a class="more-link <?php echo esc_html( Brisko\Theme::options()->button_border_radius( 0 ) ); ?>" href="<?php echo esc_url( get_permalink() ); ?>">
-			<?php echo esc_html__( 'Read More', 'brisko' ); ?>
+			<?php echo esc_html__( 'Read More', 'brisko-blog' ); ?>
 		</a>
 	</div>
 		<?php
 	endif;
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'brisko' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'brisko-blog' ),
 				'after'  => '</div>',
 			)
 		);
