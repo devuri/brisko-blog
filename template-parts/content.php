@@ -8,12 +8,12 @@
  */
 
 ?>
-<?php if ( is_sticky( $post->ID ) ): ?>
+<?php if ( is_sticky( $post->ID ) ) : ?>
 	<div class="row sticky-post">
 <?php else : ?>
 	<div class="row blog-post" style="">
 <?php endif; ?>
-	<?php if ( has_post_thumbnail( $post->ID ) ): ?>
+	<?php if ( has_post_thumbnail( $post->ID ) ) : ?>
 		<div class="col-sm entry-thumb" style="margin-left: inherit;">
 			<?php Brisko\Theme::post_thumbnail(); ?>
 		</div>
@@ -61,15 +61,14 @@
 			</footer><!-- .entry-footer -->
 		<?php else : ?>
 			<div class="post-excerpt" style="font-size: unset;">
-				<?php  Brisko\Theme::excerpt(); ?>
+				<?php Brisko\Theme::excerpt(); ?>
 			</div>
 		<div class="read-more ">
 			<a class="more-link <?php echo esc_html( Brisko\Theme::options()->button_border_radius( 0 ) ); ?>" href="<?php echo esc_url( get_permalink() ); ?>">
 			<?php echo esc_html__( 'Read More', 'brisko-blog' ); ?>
 		</a>
 	</div>
-
-		<?php
+	<?php
 	endif;
 		wp_link_pages(
 			array(
