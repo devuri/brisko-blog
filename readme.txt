@@ -1,7 +1,7 @@
 === Brisko Blog ===
 Contributors: icelayer
 Tested up to: 5.5
-Version: 0.7.1
+Version: 0.7.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
@@ -53,3 +53,5 @@ Url : https://commons.wikimedia.org/wiki/File:Raindrops_on_nasturtium_leaves.jpg
 * Add Raindrops on nasturtium leaves (Image) License information
 * Add underline textwidget links
 * Add underline body links
+
+= 0.7.3 =
