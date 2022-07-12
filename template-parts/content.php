@@ -29,14 +29,14 @@
 			the_title( '<h2 class="post-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 		?>
-		<?php brisko_before_entry_meta(); ?>
+		<?php do_action( 'brisko_before_entry_meta' ); ?>
 			<p class="post-meta" style="font-style: italic;color: #868e96; font-size: medium;">
 				<?php
 				brisko_posted_on();
 				brisko_posted_by();
 				?>
 			</p><!-- .entry-meta -->
-		<?php brisko_after_entry_meta(); ?>
+		<?php do_action( 'brisko_after_entry_meta' ); ?>
 	</header><!-- .entry-header -->
 	<div class="entry-content">
 		<?php
