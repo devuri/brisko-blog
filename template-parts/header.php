@@ -7,6 +7,6 @@
 
 ?>
 <header id="masthead" class="site-header">
-	<?php Brisko\Theme::header_image(); ?>
-	<?php Brisko\Theme::navigation(); ?>
+	<?php brisko_blog_header_image(); ?>
+	<?php get_template_part( 'template-parts/nav', 'navigation' ); ?>
 </header><!-- #masthead -->

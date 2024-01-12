@@ -15,7 +15,7 @@
 <?php endif; ?>
 	<?php if ( has_post_thumbnail( $post->ID ) ) : ?>
 		<div class="col-sm entry-thumb" style="margin-left: inherit;">
-			<?php Brisko\Theme::post_thumbnail(); ?>
+			<?php briskoblog_post_thumbnail(); ?>
 		</div>
 	<?php endif; ?>
 	<div class="col-sm">
@@ -61,10 +61,14 @@
 			</footer><!-- .entry-footer -->
 		<?php else : ?>
 			<div class="post-excerpt" style="font-size: unset;">
-				<?php Brisko\Theme::excerpt(); ?>
+				<?php
+					if ( true === get_theme_mod( 'blog_excerpt', true ) ) {
+						the_excerpt();
+					}
+				?>
 			</div>
 		<div class="read-more ">
-			<a class="more-link <?php echo esc_html( Brisko\Theme::options()->button_border_radius( 0 ) ); ?>" href="<?php echo esc_url( get_permalink() ); ?>">
+			<a class="more-link <?php echo esc_html( briskoblog_button_border_radius( 0 ) ); ?>" href="<?php echo esc_url( get_permalink() ); ?>">
 			<?php echo esc_html__( 'Read More', 'brisko-blog' ); ?>
 		</a>
 	</div>
