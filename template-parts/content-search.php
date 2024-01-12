@@ -25,7 +25,29 @@
 <?php endif; ?>
 <?php if ( has_post_thumbnail( $post->ID ) ): ?>
 		<div class="col-sm entry-thumb" style="margin-left: inherit;">
-			<?php Brisko\Theme::post_thumbnail(); ?>
+			<?php
+				if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
+					return false;
+				} elseif ( is_singular() ) {
+					briskoblog_post_thumbnail();
+				} else { ?>
+				<div class="blog-thumbnail">
+						<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
+						<?php
+							the_post_thumbnail(
+								'post-thumbnail',
+								array(
+									'alt' => the_title_attribute(
+										array(
+											'echo' => false,
+										)
+									),
+								)
+							);
+						?>
+					</a>
+				</div><!-- .blog-thumbnail -->
+			<?php } // end if ?>
 		</div>
 <?php endif; ?>
 <div class="col-sm">
@@ -71,10 +93,14 @@
 			</footer><!-- .entry-footer -->
 		<?php else : ?>
 			<div class="post-excerpt" style="font-size: unset;">
-				<?php  Brisko\Theme::excerpt(); ?>
+			<?php
+				if ( true === get_theme_mod( 'blog_excerpt', true ) ) {
+					the_excerpt();
+				}
+			?>
 			</div>
 		<div class="read-more ">
-			<a class="more-link <?php echo esc_html( Brisko\Theme::options()->button_border_radius( 0 ) ); ?>" href="<?php echo esc_url( get_permalink() ); ?>">
+			<a class="more-link <?php echo esc_html( briskoblog_button_border_radius( 0 ) ); ?>" href="<?php echo esc_url( get_permalink() ); ?>">
 			<?php echo esc_html__( 'Read More', 'brisko-blog' ); ?>
 		</a>
 	</div>

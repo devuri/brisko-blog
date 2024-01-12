@@ -15,7 +15,7 @@
 <?php endif; ?>
 	<?php if ( has_post_thumbnail( $post->ID ) ) : ?>
 		<div class="col-sm entry-thumb" style="margin-left: inherit;">
-			<?php Brisko\Theme::post_thumbnail(); ?>
+			<?php briskoblog_post_thumbnail(); ?>
 		</div>
 	<?php endif; ?>
 	<div class="col-sm">
@@ -29,14 +29,14 @@
 			the_title( '<h2 class="post-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 		?>
-		<?php brisko_before_entry_meta(); ?>
+		<?php do_action( 'brisko_before_entry_meta' ); ?>
 			<p class="post-meta" style="font-style: italic;color: #868e96; font-size: medium;">
 				<?php
 				brisko_posted_on();
 				brisko_posted_by();
 				?>
 			</p><!-- .entry-meta -->
-		<?php brisko_after_entry_meta(); ?>
+		<?php do_action( 'brisko_after_entry_meta' ); ?>
 	</header><!-- .entry-header -->
 	<div class="entry-content">
 		<?php
@@ -61,10 +61,14 @@
 			</footer><!-- .entry-footer -->
 		<?php else : ?>
 			<div class="post-excerpt" style="font-size: unset;">
-				<?php Brisko\Theme::excerpt(); ?>
+				<?php
+					if ( true === get_theme_mod( 'blog_excerpt', true ) ) {
+						the_excerpt();
+					}
+				?>
 			</div>
 		<div class="read-more ">
-			<a class="more-link <?php echo esc_html( Brisko\Theme::options()->button_border_radius( 0 ) ); ?>" href="<?php echo esc_url( get_permalink() ); ?>">
+			<a class="more-link <?php echo esc_html( briskoblog_button_border_radius( 0 ) ); ?>" href="<?php echo esc_url( get_permalink() ); ?>">
 			<?php echo esc_html__( 'Read More', 'brisko-blog' ); ?>
 		</a>
 	</div>
